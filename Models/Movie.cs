@@ -1,4 +1,4 @@
-﻿using EcomerceApp.Data;
+﻿using EcomerceApp.Data.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 

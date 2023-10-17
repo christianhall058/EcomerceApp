@@ -1,4 +1,4 @@
-﻿namespace EcomerceApp.Data
+﻿namespace EcomerceApp.Data.Enums
 {
     public enum MovieCategory
     {
