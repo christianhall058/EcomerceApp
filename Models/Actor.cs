@@ -7,7 +7,7 @@ namespace EcomerceApp.Models
         [Key]
         public int Id { get; set; }
 
-        public int ProfilePictureURL { get; set; }
+        public string ProfilePictureURL { get; set; }
 
         public string Name { get; set; }
 
