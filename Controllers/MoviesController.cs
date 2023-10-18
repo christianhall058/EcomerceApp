@@ -13,10 +13,10 @@ namespace EcomerceApp.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var data = _context.Movies.ToListAsync();
-            return View();
+            var data = _context.Movies.ToList();
+            return View(data);
         }
     }
 }
