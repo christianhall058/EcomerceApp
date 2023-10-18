@@ -15,8 +15,8 @@ namespace EcomerceApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var allProducers = _context.Producers.ToListAsync();
-            return View();
+            var data = _context.Producers.ToListAsync();
+            return View(data);
         }
     }
 }

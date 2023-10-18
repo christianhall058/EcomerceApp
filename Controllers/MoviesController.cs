@@ -15,7 +15,7 @@ namespace EcomerceApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var allProducers = _context.Movies.ToListAsync();
+            var data = _context.Movies.ToListAsync();
             return View();
         }
     }
