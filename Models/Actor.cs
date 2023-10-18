@@ -7,7 +7,7 @@ namespace EcomerceApp.Models
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "Profile Picture URL")]
+        [Display(Name = "Profile Picture")]
         public string ProfilePictureURL { get; set; }
         [Display(Name = "Name")]
         public string Name { get; set; }
