@@ -1,4 +1,5 @@
 using EcomerceApp.Data;
+using EcomerceApp.Data.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +9,11 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 //DbContext configuration
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
+//Services configuration
+builder.Services.AddScoped<IActorsService, ActorsService>();
+
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(); 
 
 var app = builder.Build();
 

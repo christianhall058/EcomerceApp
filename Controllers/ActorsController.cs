@@ -1,20 +1,21 @@
 ﻿using EcomerceApp.Data;
+using EcomerceApp.Data.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcomerceApp.Controllers
 {
     public class ActorsController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IActorsService _service;
 
-        public ActorsController(AppDbContext context)
+        public ActorsController(IActorsService service)
         {
-            _context = context;
+            _service = service;
         }
 
         public IActionResult Index()
         {
-            var data = _context.Actors.ToList();
+            var data = _service.GetAll();
             return View(data);
         }
     }
