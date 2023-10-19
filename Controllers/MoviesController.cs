@@ -15,7 +15,7 @@ namespace EcomerceApp.Controllers
 
         public IActionResult Index()
         {
-            var data = _context.Movies.ToList();
+            var data = _context.Movies.Include(n => n.Cinema).OrderBy(n => n.Name).ToList();
             return View(data);
         }
     }
